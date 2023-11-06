@@ -13,18 +13,35 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <script defer src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=21KdcqXnhYqFBz8j0-Lx41b4fcP_D-xgekUDJVvSeihyCz7GhP7uvireX8mG0rfp"
+      charset="UTF-8"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
 
+    <script defer src="other.js"></script>
     <title>mapty // Map your workouts</title>
   </head>
   <body>
     <div class="sidebar">
-      <img src="./logo.png" alt="Logo" class="logo" />
+      <img src="logo.png" alt="Logo" class="logo" />
+
       <ul class="workouts">
         <form class="form">
           <div class="form__row">
             <label class="form__label">Type</label>
-
             <select class="form__input form__input--type">
               <option value="running">Running</option>
               <option value="cycling">Cycling</option>
@@ -38,9 +55,10 @@
             <label class="form__label">Duration</label>
             <input
               class="form__input form__input--duration"
-              placeholder=" min"
+              placeholder="min"
             />
           </div>
+
           <div class="form__row">
             <label class="form__label">Cadence</label>
             <input
@@ -57,10 +75,11 @@
           </div>
           <button class="form__btn">OK</button>
         </form>
-        <li class="workout workout--running" data-id="1234">
-          <h2 class="workout__title">Running on Aprel 14</h2>
+
+        <li class="workout workout--running" data-id="1234567890">
+          <h2 class="workout__title">Running on April 14</h2>
           <div class="workout__details">
-            <span class="workout__icon">🏃🏽</span>
+            <span class="workout__icon">🏃‍♂️</span>
             <span class="workout__value">5.2</span>
             <span class="workout__unit">km</span>
           </div>
@@ -70,21 +89,21 @@
             <span class="workout__unit">min</span>
           </div>
           <div class="workout__details">
-            <span class="workout__icon">♦️</span>
+            <span class="workout__icon">⚡️</span>
             <span class="workout__value">4.6</span>
             <span class="workout__unit">min/km</span>
           </div>
           <div class="workout__details">
-            <span class="workout__icon">👂🏻</span>
+            <span class="workout__icon">🦶🏼</span>
             <span class="workout__value">178</span>
-            <span class="workout__unit">spn</span>
+            <span class="workout__unit">spm</span>
           </div>
         </li>
 
-        <li class="workout workout--cycling" data-id="1234">
+        <li class="workout workout--cycling" data-id="1234567891">
           <h2 class="workout__title">Cycling on April 5</h2>
           <div class="workout__details">
-            <span class="workout__icon">🏃🏽‍♀️</span>
+            <span class="workout__icon">🚴‍♀️</span>
             <span class="workout__value">27</span>
             <span class="workout__unit">km</span>
           </div>
@@ -94,27 +113,28 @@
             <span class="workout__unit">min</span>
           </div>
           <div class="workout__details">
-            <span class="workout__icon">♦️</span>
+            <span class="workout__icon">⚡️</span>
             <span class="workout__value">16</span>
-            <span class="workout__unit">min/h</span>
+            <span class="workout__unit">km/h</span>
           </div>
           <div class="workout__details">
-            <span class="workout__icon">👂🏻</span>
+            <span class="workout__icon">⛰</span>
             <span class="workout__value">223</span>
             <span class="workout__unit">m</span>
           </div>
         </li>
       </ul>
 
-      <!-- <p class="copyright">
+      <p class="copyright">
         &copy; Copyright by
         <a
           class="twitter-link"
           target="_blank"
           href="https://twitter.com/jonasschmedtman"
           >Jonas Schmedtmann</a
-        >. Use for learning or your portfolio. Don't claim as your own.
-      </p> -->
+        >. Use for learning or your portfolio. Don't use to teach. Don't claim
+        as your own.
+      </p>
     </div>
 
     <div id="map"></div>
